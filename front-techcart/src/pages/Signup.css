@@ -1,0 +1,64 @@
+body {
+    background-color: #87c129;
+    font-family: 'K2D', sans-serif;
+}
+  .brand{
+    color: black;
+  }
+
+  .brand1{
+    color: red;
+  }
+
+  .signup-container {
+    background: #654ea3; 
+    background: -webkit-linear-gradient(to right, #eaafc8, #654ea3); 
+    background: linear-gradient(to right, #eaafc8, #654ea3); 
+    
+  }
+  
+  .signup-form {
+    background: #fff;
+    width: 600px;
+    border-radius: 12px;
+    border: 1px solid #b3aeae;
+    
+  }
+  
+  .signup-form h2 {
+    font-weight: bold;
+  }
+  
+  .signup-form p {
+    font-size: 1rem;
+    color: #333;
+  }
+  
+  .signup-form .form-control {
+    border: 2px solid #aa9797;
+    border-radius: 8px;
+    font-size: 14px;
+  }
+  
+  .signup-form .btn-primary {
+    background-color: #D999B0;
+  border: none;
+  font-weight: bold;
+  border: 2px solid #886F6F;
+  }
+  
+  .signup-form .btn-primary:hover {
+    background-color: #c76681;
+  }
+  
+  .login-link {
+    color: #666666;
+    font-weight: bold;
+    font-size: 1rem;
+    text-decoration: underline;
+  }
+  
+  .login-link:hover {
+    text-decoration: underline;
+  }
+  
