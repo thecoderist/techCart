@@ -5,9 +5,9 @@ import Register from './pages/Register';
 import Landing from './Landing';
 import Cart from './Cart';
 import Checkout from './Checkout';
-import Products from './Products';
+import Products from './Product';
 import AdminProducts from './Adminproduct';
-import AdminTransactions from './AdminTransactions';
+import AdminTransactions from './AdminTransaction';
 import ProtectedRoute from './components/ProtectedRoute';
 import { ProductProvider } from './context/ProductContext';
 
