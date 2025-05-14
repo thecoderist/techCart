@@ -1,0 +1,22 @@
+/* Ensure smooth transitions on hover */
+.navbar .nav-link {
+    transition: background-color 0.3s, color 0.3s, border-color 0.3s;
+  }
+  
+  /* Hover effect for navbar links */
+  .navbar .nav-link:hover {
+    background-color: #dea3a7; /* Red background */
+    color: white; /* Change text color to white */
+    border-color: #886F6F; /* Add border color for better definition */
+    border-radius: 5px; /* Rounded corners on hover */
+    padding: 8px 16px; /* Add padding to make the hover area bigger */
+  }
+  
+  /* Focus state to ensure the effect stays when focused */
+  .navbar .nav-link:focus {
+    background-color: #dea3a7; /* Same red background */
+    color: white; /* Text color stays white */
+    border-color: #886F6F; /* Border color stays same */
+    outline: none; /* Remove the default focus outline */
+  }
+  
