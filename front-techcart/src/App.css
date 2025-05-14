@@ -1,38 +1,475 @@
-.App {
-  text-align: center;
+body, .landing-page {
+  background-image: linear-gradient(135deg, #F1CA74 10%, #A64DB6 100%);
+  margin: 0;
+  padding: 0;
+  font-family: 'K2D', sans-serif;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
+.landing-page {
   min-height: 100vh;
   display: flex;
   flex-direction: column;
+  justify-content: space-between;
+}
+
+.navbar-custom {
+  background-color: white;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+}
+
+.brand-logo {
+  font-weight: bold;
+}
+
+.pink-text {
+  color: red;
+  font-size: 2vw;
+}
+
+.black-text {
+  color: black;
+  font-size: 2vw;
+}
+
+.orange-text {
+  color: black;
+  font-size: 2vw;
+}
+
+.search-form {
+  gap: 10px;
+}
+
+.search-input {
+  width: 200px;
+  border-radius: 4px;
+  border: 1px solid #ccc;
+  padding: 5px 10px;
+}
+
+.icon {
+  cursor: pointer;
+  font-size: 2rem;
+  color: black;
+  margin: 5px;
+}
+
+.hero-img {
+  width: 100%;
+  height: auto;
+  max-height: 55rem;
+  object-fit: cover;
+  display: block;
+  margin: 0 auto;
+}
+
+.welcome-text {
+  padding: 10px;
+  font-weight: 500;
+  font-size: 1.5vw;
+}
+
+.customer-favorites {
+  margin-top: 20px;
+}
+
+.favorites-title {
+  font-weight: bold;
+  font-size: 3rem;
+  letter-spacing: 1px;
+  color: black;
+  margin-bottom: 20px;
+  border-top: 1px solid #cfcfcf;
+  padding: 20px 0;
+}
+
+.favorite-card {
+  background-color: #ffffff;
+  border: 1px solid #ddd;
+  border-radius: 10px;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  margin-bottom: 10px;
+}
+
+.favorite-card-body {
+  background-color: #d6d2c5;
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.cake-image {
+  padding: 1rem;
+}
+
+.text-center .card-title {
+  color: black;
+  font-size: 1rem;
+  font-weight: 600;
+}
+
+.card-text {
+  font-size: 1.5rem;
+}
+
+.add-to-cart-btn {
+  background-color: black;
+  color: white;
+  border: 1px solid #886F6F;
+  padding: 10px 20px;
+  font-size: 1vw;
+  font-weight: bold;
+  border-radius: 8px;
+  width: 80%;
+  margin: 10px auto;
+  transition: background-color 0.3s ease;
+}
+
+.add-to-cart-btn:hover {
+  background-color: #ad838e;
+}
+
+.view-all-btn {
+  background-color: #ac9898;
+  color: white;
+  border: none;
+  padding: 15px 24px;
+  font-weight: bold;
+  border-radius: 10px;
+  margin-top: 30px;
+  letter-spacing: 1px;
+  transition: background-color 0.3s ease;
+  width: 25rem;
+}
+
+.view-all-btn:hover {
+  background-color: #8c6d66;
+}
+
+.footer {
+  width: 100%;
+  background-color: #c9c4b1;
+  padding: 10px;
+  text-align: center;
+}
+
+.footer-link {
+  color: #6d654a;
+  text-decoration: none;
+}
+
+.footer-link:hover {
+  text-decoration: underline;
+}
+
+.customer-title {
+  font-size: 1.5vw;
+  color: #b46b8b;
+  font-weight: bold;
+  text-align: center;
+}
+
+.customer-text {
+  font-size: 1vw;
+  color: #5c4a4a;
+}
+
+.customer-details {
+  max-width: 40rem;
+  margin: 0 auto;
+  padding: 20px;
+  display: block;
+}
+
+.checkout-btn {
+  background-color: #b46b8b;
+  border: 1px solid #8b8b8b;
+  width: 15rem;
+}
+
+.checkout-process.mt-5 {
+  margin-top: 0;
+}
+
+.table-header th {
+  background-color: #c4bdaa;
+  text-align: center;
+  color: #413f3f;
+}
+
+.cart-table-container {
+  margin-top: 20px;
+  width: 100%;
+  background-color: #ffffff;
+  border-radius: 10px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  padding: 20px;
+  margin-bottom: 20px;
+  height: auto;
+  max-height: 60vh;
+  overflow-y: auto;
+}
+
+.my-4 .h3 {
+  text-align: center;
+  color: #694E4E;
+}
+
+.cart-title {
+  font-weight: bolder;
+}
+
+.bi-arrow-left-square-fill {
+  color: #886F6F;
+}
+
+.bi-arrow-left-square-fill:hover {
+  color: #5c4a4a;
+  transform: translateY(-50%) scale(1.1);
+  transition: 0.2s;
+}
+
+.empty-cart-message {
+  text-align: center;
+  padding: 20px;
+  color: #888;
+  font-size: 1.2rem;
+  font-weight: 600;
+}
+
+.cart-table {
+  width: 100%;
+  background-color: #ffffff;
+  border-radius: 10px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+}
+
+.cart-table th, .cart-table td {
+  text-align: center;
+  padding: 12px;
+  font-size: 1rem;
+  color: #5c4a4a;
+  vertical-align: middle;
+}
+
+.cart-table th {
+  background-color: #E2D3C5;
+  font-weight: 600;
+  border: 1px solid #886F6F;
+}
+
+.cart-table td {
+  background-color: #fff;
+  border: 1px solid #886F6F;
+}
+
+.quantity-control {
+  display: flex;
   align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
+  gap: 5px;
+}
+
+.quantity-control .btn {
+  padding: 5px 10px;
+  font-size: 1rem;
+  border: 1px solid #886F6F;
+  background-color: #E2D3C5;
+  color: #5c4a4a;
+}
+
+.quantity-control .btn:hover {
+  background-color: #ad838e;
   color: white;
 }
 
-.App-link {
-  color: #61dafb;
+.quantity-control span {
+  padding: 5px 10px;
+  font-size: 1rem;
+  font-weight: 500;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+.edit-btn, .delete-btn {
+  padding: 8px 15px;
+  border-radius: 5px;
+  font-size: 0.9rem;
+  margin: 0 5px;
+}
+
+.edit-btn {
+  background-color: #B47490;
+  color: white;
+  border: 1px solid #886F6F;
+}
+
+.delete-btn {
+  background-color: #e63946;
+  color: white;
+  border: 1px solid #886F6F;
+}
+
+.checkout-btn-container {
+  display: flex;
+  justify-content: flex-end;
+  margin-top: 20px;
+}
+
+.checkout-btn {
+  background-color: black;
+  border: 1.5px solid #886F6F;
+  color: white;
+  padding: 10px 20px;
+  border-radius: 5px;
+  font-size: 1rem;
+  font-weight: bold;
+}
+
+.checkout-btn:hover {
+  background-color: red;
+  border: 1px solid #886F6F;
+}
+
+.edit-btn:hover {
+  background-color: #a07688;
+  border: 1px solid #886F6F;
+}
+
+.delete-btn:hover {
+  background-color: #d91c28;
+  border: 1px solid #886F6F;
+}
+
+.navbar-btn:hover{
+  background-color: #d91c28;
+  border: 1px solid #886F6F;
+}
+
+.cart-table .form-check-input {
+  width: 1.5rem;
+  height: 1.5rem;
+  margin: 0;
+  border: 1px solid #886F6F;
+  transition: all 0.3s ease;
+}
+
+.cart-table .form-check-input:checked {
+  background-color: #D999B0;
+  border: 1.5px solid #886F6F;
+}
+
+.cart-table .form-check-input:checked:focus {
+  box-shadow: 0 0 0 0.25rem rgba(217, 153, 176, 0.25);
+}
+
+.prod, .trans {
+  font-size: 1.1rem;
+  color: #B47490;
+  font-weight: bold;
+}
+
+.total-price {
+  text-align: right;
+  margin: 20px 20px 0 0;
+  font-size: 1.2rem;
+  font-weight: bold;
+  color: #5c4a4a;
+}
+
+@media (max-width: 768px) {
+  .cart-table th, .cart-table td {
+    font-size: 0.9rem;
+    padding: 8px;
   }
-  to {
-    transform: rotate(360deg);
+
+  .cart-table td button {
+    width: 60px;
+    font-size: 0.8rem;
   }
+
+  .quantity-control .btn {
+    padding: 3px 8px;
+    font-size: 0.9rem;
+  }
+
+  .total-price {
+    margin-right: 10px;
+    font-size: 1rem;
+  }
+}
+
+.cart-badge {
+  position: absolute;
+  top: -10px;
+  right: -10px;
+  background-color: #e63946; /* Red color for the badge */
+  color: white;
+  border-radius: 50%;
+  padding: 2px 6px;
+  font-size: 0.75rem;
+  font-weight: bold;
+  line-height: 1;
+  min-width: 18px; /* Ensures the badge is circular even with single-digit numbers */
+  text-align: center; /* Centers the number inside the badge */
+}
+
+.cart-badge {
+  position: absolute;
+  top: -10px;
+  right: -10px;
+  background-color: #b46b8b; /* Pink color matching your theme */
+  color: white;
+  border-radius: 50%;
+  padding: 2px 6px;
+  font-size: 0.75rem;
+  font-weight: bold;
+  line-height: 1;
+}
+
+
+.fixed-alert {
+  position: fixed;
+  top: 10px; /* Adjust as needed to avoid overlap with navbar */
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 1050; /* Ensure it appears above other elements */
+  width: 90%;
+  max-width: 500px; /* Limit the width for better appearance */
+}
+
+.alert-custom {
+  border-left: 5px solid #28a745; /* Green border for success */
+  background-color: #e9f7eb; /* Light green background */
+  color: #155724; /* Dark green text */
+  border-radius: 8px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  transition: opacity 0.5s ease-out;
+}
+
+.alert-custom .alert-heading {
+  font-size: 1.25rem;
+  font-weight: bold;
+  margin-bottom: 0.5rem;
+}
+
+.alert-custom p {
+  margin-bottom: 0.25rem;
+}
+
+.alert-custom .btn-close {
+  color: #155724;
+  opacity: 0.8;
+}
+
+.alert-custom .btn-close:hover {
+  opacity: 1;
+}
+
+/* Optional: Add padding to the top of the container to prevent overlap with the fixed alert */
+.customer-favorites {
+  padding-top: 60px; /* Adjust based on the height of the alert */
 }
