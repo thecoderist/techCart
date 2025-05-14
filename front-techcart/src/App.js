@@ -1,24 +1,72 @@
-import logo from './logo.svg';
-import './App.css';
+import React from 'react';
+import { Routes, Route } from 'react-router-dom';
+import Login from './pages/Login';
+import Register from './pages/Register';
+import Landing from './Landing';
+import Cart from './Cart';
+import Checkout from './Checkout';
+import Products from './Products';
+import AdminProducts from './Adminproduct';
+import AdminTransactions from './AdminTransactions';
+import ProtectedRoute from './components/ProtectedRoute';
+import { ProductProvider } from './context/ProductContext';
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <ProductProvider>
+      <Routes>
+        <Route path="/login" element={<Login />} />
+        <Route path="/register" element={<Register />} />
+        <Route
+          path="/"
+          element={
+            <ProtectedRoute>
+              <Landing />
+            </ProtectedRoute>
+          }
+        />
+        <Route
+          path="/products"
+          element={
+            <ProtectedRoute>
+              <Products />
+            </ProtectedRoute>
+          }
+        />
+        <Route
+          path="/admintransactions"
+          element={
+            <ProtectedRoute>
+              <AdminTransactions />
+            </ProtectedRoute>
+          }
+        />
+        <Route
+          path="/adminproducts"
+          element={
+            <ProtectedRoute>
+              <AdminProducts />
+            </ProtectedRoute>
+          }
+        />
+        <Route
+          path="/cart"
+          element={
+            <ProtectedRoute>
+              <Cart />
+            </ProtectedRoute>
+          }
+        />
+        <Route
+          path="/checkout"
+          element={
+            <ProtectedRoute>
+              <Checkout />
+            </ProtectedRoute>
+          }
+        />
+      </Routes>
+    </ProductProvider>
   );
 }
 
