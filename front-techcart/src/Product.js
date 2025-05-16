@@ -145,7 +145,7 @@ const Products = () => {
                       variant="top"
                       src={imageUrl}
                       alt={item.title}
-                      className="cake-image"
+                      className="cake-image "
                       onError={(e) => {
                         console.log(`Failed to load image for ${item.title}: ${imageUrl}`);
                         e.target.src = '/placeholder.png';
