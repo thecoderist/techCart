@@ -1,22 +1,28 @@
-/* Ensure smooth transitions on hover */
-.navbar .nav-link {
-    transition: background-color 0.3s, color 0.3s, border-color 0.3s;
-  }
-  
-  /* Hover effect for navbar links */
-  .navbar .nav-link:hover {
-    background-color: #dea3a7; /* Red background */
-    color: white; /* Change text color to white */
-    border-color: #886F6F; /* Add border color for better definition */
-    border-radius: 5px; /* Rounded corners on hover */
-    padding: 8px 16px; /* Add padding to make the hover area bigger */
-  }
-  
-  /* Focus state to ensure the effect stays when focused */
-  .navbar .nav-link:focus {
-    background-color: #dea3a7; /* Same red background */
-    color: white; /* Text color stays white */
-    border-color: #886F6F; /* Border color stays same */
-    outline: none; /* Remove the default focus outline */
-  }
-  
+@import url("https://fonts.googleapis.com/css2?family=Quicksand:wght@300..700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Titan+One&display=swap");
+
+.navbar-custom {
+	font-family: "Quicksand", sans-serif;
+	background-color: #765827 !important;
+}
+
+.brand-logo {
+	color: #fff;
+	font-family: "Titan One", sans-serif;
+}
+
+.nav-link {
+	color: #fff !important;
+	font-weight: 600;
+	font-size: 17px;
+}
+
+.nav-link:hover {
+	background-color: #ded0b6;
+	color: #000;
+	border-radius: 1vh;
+}
+
+footer {
+	background-color: #765827 !important;
+}

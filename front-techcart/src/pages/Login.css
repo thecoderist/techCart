@@ -1,92 +1,52 @@
+@import url("https://fonts.googleapis.com/css2?family=Quicksand:wght@300..700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Titan+One&display=swap");
+
 body {
-    font-family: 'K2D', sans-serif;
-  }
-  
-  .login-container {
-    background-color: #A17777;
-    min-height: 50vh; 
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    padding: 50px;
-  }
-  
-  .login-form {
-    background: #FFFFFF;
-    width: 100%;
-    max-width: 500px; 
-    padding: 50px !important;
-    border-radius: 10px;
-    border: 1px solid #b3aeae;
-  }
-  
-  .form-control{
-    border: 2px solid #972727;
-  }
-  
-  .login-form h2 {
-    color: #333;
-    font-weight: bold;
-    margin-bottom: 20px;
-  }
-  
-  .login-form .form-label {
-    font-weight: 600;
-  }
-  
-  .login-form .btn-primary {
-    background-color: #D999B0;
-    font-weight: bold;
-    border: 2px solid #886F6F;
-  }
-  
-  .login-form .btn-primary:hover {
-    background-color: #31BCCC;
-  }
+	font-family: "Quicksand", sans-serif;
+	height: 100vh;
+}
 
-  .brand{
-    color: red;
-  }
+.login-container {
+	background-color: #765827;
+	font-family: "Quicksand", sans-serif;
+}
 
-  .brand1{
-    color: red;
-  }
+.login-form {
+	background-color: #faeed1 !important;
+	border: 3px solid #706233;
+}
 
-  .login-form p {
-    font-size: 1rem;
-    color: #333;
-  }
-  
-  .login-form .form-control {
-    border: 2px solid #a09191;
-    border-radius: 8px;
-    font-size: 14px;
-  }
-  
-  .login-form .btn-primary {
-    background-color: #A17777;
-    border: none;
-    font-weight: bold;
-    border: 2px solid #886F6F;
-  }
-  
-  .forgot{
-    text-decoration: underline;
-    padding: 5px;
-    font-size: 1rem;
-    color: #7c7268;
-  }
-  
-  .sign-up{
-    text-align: center;
-    margin-top: 15px;
-    font-size: 1vw;
-    color: #666666;
-  }
-  
-  .now{
-    text-align: center;
-    font-size: 1rem;
-    color: #666666;
-    text-decoration: underline;
-  }
+.login-title {
+	font-weight: bold;
+}
+
+.login-form .form-control {
+	border: 2px solid #aa9797;
+	border-radius: 8px;
+	font-size: 13px;
+}
+
+.login-form .btn-primary {
+	background-color: #706233;
+	font-weight: bold;
+}
+
+.login-form .btn-primary:hover {
+	background-color: #ded0b6;
+	color: #000;
+}
+
+.next-link {
+	font-weight: 600;
+}
+
+.next-link .sign-up-link {
+	color: #666666;
+	font-weight: bold;
+	text-decoration: underline;
+}
+
+.sign-up-link:hover {
+	text-decoration: underline;
+	color: #e1c78f;
+}

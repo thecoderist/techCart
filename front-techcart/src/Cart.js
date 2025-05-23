@@ -128,6 +128,7 @@ const Cart = () => {
     .reduce((total, item) => {
       const price = typeof item.price === 'string' ? parseFloat(item.price.replace('P', '')) : parseFloat(item.price) || 0;
       return total + (price * item.qty);
+
     }, 0);
 
   // Handle opening the modal for editing
@@ -277,7 +278,7 @@ const Cart = () => {
 
         {cartItems.length > 0 && !loading && (
           <div className="total-price text-right mb-3">
-            <h4 className="text-white">Total: P{totalPrice.toFixed(2)}</h4>
+            <h4 className="text-dark">Total: P{totalPrice.toFixed(2)}</h4>
           </div>
         )}
 
